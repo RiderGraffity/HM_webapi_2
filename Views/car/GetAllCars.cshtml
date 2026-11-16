@@ -1,0 +1,17 @@
+﻿@model List<HM_webapi_2.ModelsOfCars>
+
+@{
+    ViewData["Title"] = "Каталог автомобилей";
+}
+
+<h1>Каталог автомобилей</h1>
+
+@foreach (var car in Model)
+{
+    <div>
+        <h2>@car.Mark @car.Model</h2>
+        <p>Цена: @car.Price.ToString("N0")</p>
+    </div>
+
+    <hr />
+}
